@@ -49,35 +49,3 @@ This repository presents the project from a **data science** perspective — foc
     "distance_cm": 15.4
   }
 
-🔧 System Architecture
-text
-Copy
-Edit
-  [Hand Motion / Touch Input]
-              ↓
-      [ESP32 Microcontroller]
-         |      |       |
-     [MPU6050] [HC-SR04] [TTP223 Array]
-              ↓
-        WebSocket (real-time)
-              ↓
-       Browser Simulator (JS)
-              ↓
-      Web Audio API (Output)
-
-🧑‍💻 Tech Stack
-Layer	Tools / Components
-Hardware	ESP32, TTP223, MPU6050, HC-SR04
-Firmware	C++ (PlatformIO), I2C, GPIO
-Communication	WebSocket (ESP32 client ↔ browser server)
-Audio Engine	Web Audio API, Howler.js (JS)
-Interface	HTML/CSS/JS frontend
-
-👥 Contributors
-Tilak Jilka
-
-Rohit Vaidya
-
-Preksha Vartak
-Under the guidance of Dr. Gautam Shah
-St. Francis Institute of Technology, Mumbai, India
