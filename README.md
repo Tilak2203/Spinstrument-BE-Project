@@ -10,7 +10,7 @@ This repository presents the project from a **data science** perspective — foc
 
 - **Type:** Embedded System + Data Streaming + Audio Simulation
 - **Platform:** ESP32 microcontroller
-- **Languages:** C++, JavaScript (WebSocket + Web Audio API)
+- **Languages:** C++, JavaScript (WebSocket + Web Audio API) 
 - **Data Input:** Accelerometer, Gyroscope, Ultrasonic Sensor, Touch Sensors
 - **Output:** Musical notes via Web Audio API
 - **Mode:** Real-time, interactive
