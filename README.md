@@ -1,51 +1,50 @@
-# 🎵 Spinstrument: Motion-Based Musical Instrument
+# 🎶 Spinstrument: A Motion-Based Musical Interface
 
-**Spinstrument** is a real-time, motion-driven musical interface that transforms hand gestures and touch inputs into dynamic sound using embedded sensors and web audio technologies. Designed using ESP32 and built for interactivity, Spinstrument bridges engineering, data science, and musical expression.
+**Spinstrument** is a real-time interactive musical instrument that converts human motion and touch into musical output. Built on the ESP32 microcontroller with sensor fusion from accelerometers, gyroscopes, ultrasonic sensors, and touch pads, this project fuses engineering, creativity, and data science to explore new forms of musical expression.
 
-This repository presents the project from a **data science** perspective - focusing on real-time sensor data acquisition, feature extraction, event-driven mapping, and analytical potential.
-
----
-
-## 📌 Project Overview
-
-- **Type:** Embedded System + Data Streaming + Audio Simulation
-- **Platform:** ESP32 microcontroller
-- **Languages:** C++, JavaScript (WebSocket + Web Audio API) 
-- **Data Input:** Accelerometer, Gyroscope, Ultrasonic Sensor, Touch Sensors
-- **Output:** Musical notes via Web Audio API
-- **Mode:** Real-time, interactive
+Designed for intuitive use and intelligent response, Spinstrument provides a responsive platform for performing, experimenting, and analyzing motion-based audio.
 
 ---
 
-## 🎯 Objectives
+## 🔍 Project Summary
 
-- Capture and stream real-time motion and touch data
-- Convert physical gestures into audio signals
-- Build a simulator using Web Audio API for sound synthesis
-- Explore data science applications in sensor-driven musical interaction
+- **Type:** Embedded + Real-time Data Streaming + Audio Synthesis
+- **Built With:** ESP32, WebSocket, C++, Web Audio API
+- **Primary Inputs:** Motion (MPU6050), Touch (TTP223), Distance (HC-SR04)
+- **Primary Output:** Audio tones via Web Audio API
+- **Mode:** Interactive, real-time musical feedback
 
 ---
 
-## 📊 Data Science Perspective
+## 🎯 Goals
 
-### 🔴 Data Acquisition
-- **MPU6050** (Accelerometer + Gyroscope): Captures 3D motion data (roll, pitch, yaw)
-- **HC-SR04** (Ultrasonic): Measures distance to map octaves
-- **TTP223** (Touch Sensors): Trigger note events
+- Translate physical gestures into musical notes
+- Enable intuitive musical interaction using sensor fusion
+- Create a web-based audio simulator for immediate feedback
+- Introduce data science readiness for gesture recognition and analysis
 
-### 🟡 Feature Extraction
-- **Roll angle** → Instrument selection (e.g., Sitar @ 0°, Piano @ 90°)
-- **Ultrasonic distance** → Octave mapping (threshold-based binning)
-- **Touch index + timestamp** → Note trigger with metadata
+---
 
-### 🟢 Event Mapping Logic
-- Sensor states are evaluated in real time
-- A WebSocket pipeline transmits structured JSON packets:
-  ```json
-  {
-    "roll": 90,
-    "octave": 2,
-    "sensor_id": 5,
-    "distance_cm": 15.4
-  }
+## 🧠 Data Science View
 
+### 🔴 Real-Time Sensor Data Acquisition
+- **MPU6050** captures roll, pitch, yaw — to switch instruments
+- **Ultrasonic Sensor** detects hand proximity — to control octave range
+- **Touch Sensors (TTP223)** act as input triggers for musical notes
+
+### 🟡 Feature Engineering
+| Feature | Description |
+|--------|-------------|
+| Roll Angle | Determines active instrument (e.g., Sitar @ 0°, Piano @ 90°) |
+| Distance | Classifies octave range via threshold bins |
+| Touch Sensor ID | Index of activated sensor maps to musical note |
+
+Example JSON streamed via WebSocket:
+```json
+{
+  "roll": 90,
+  "distance_cm": 16.3,
+  "octave": 2,
+  "sensor_id": 4,
+  "timestamp": "2025-07-10T14:35:20Z"
+}
