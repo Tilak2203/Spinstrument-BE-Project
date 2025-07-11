@@ -2,7 +2,7 @@
 
 **Spinstrument** is a real-time, motion-driven musical interface that transforms hand gestures and touch inputs into dynamic sound using embedded sensors and web audio technologies. Designed using ESP32 and built for interactivity, Spinstrument bridges engineering, data science, and musical expression.
 
-This repository presents the project from a **data science** perspective — focusing on real-time sensor data acquisition, feature extraction, event-driven mapping, and analytical potential.
+This repository presents the project from a **data science** perspective - focusing on real-time sensor data acquisition, feature extraction, event-driven mapping, and analytical potential.
 
 ---
 
